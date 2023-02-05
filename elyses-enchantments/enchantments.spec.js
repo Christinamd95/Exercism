@@ -145,8 +145,8 @@ describe('make cards disappear', () => {
   test('remove the middle two cards', () => {
     const stack = [1, 2, 3, 4];
 
-    removeItem(stack, 1);
-    removeItem(stack, 1);
+    removeItem(stack, 1); // [1,3,4]
+    removeItem(stack, 1); //[1,4]
 
     const expected = [1, 4];
     expect(stack).toStrictEqual(expected);
